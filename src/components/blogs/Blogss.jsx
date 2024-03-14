@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Blog from "../blog/Blog";
 
-const Blogss = () => {
+const Blogss = ({handleAddbook}) => {
     const [blogs, setBlogs] = useState([])
 
     useEffect(()=>{
@@ -14,10 +14,11 @@ const Blogss = () => {
         <div className="md:w-2/3 ">
             <h1 className="text-4xl">Blogs:{blogs.length}</h1>
             {
-                blogs.map((blog)=> <Blog key ={blog.id} blog = {blog} ></Blog> )
+                blogs.map((blog)=> <Blog key ={blog.id} blog = {blog} handleAddbook={handleAddbook} ></Blog> )
             }
         </div>
     );
 };
 
 export default Blogss;
+
