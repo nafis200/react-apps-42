@@ -16,6 +16,7 @@ const Blogss = ({handleAddbook,handleTime}) => {
             <h1 className="text-4xl">Blogs:{blogs.length}</h1>
             {
                 blogs.map((blog)=> <Blog key ={blog.id} blog = {blog} handleAddbook={handleAddbook} handleTime={handleTime} ></Blog> )
+                
             }
         </div>
     );
